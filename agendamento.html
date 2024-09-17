@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop - Agendamento</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">PetShop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="cadastro_cliente_pet.html">Cadastro</a></li>
+                <li class="nav-item active"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Formulário de Agendamento -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Agendamento de Serviços</h2>
+        <form onsubmit="return validarFormularioAgendamento()">
+            <div class="form-group">
+                <label for="data_agendamento">Data do Agendamento</label>
+                <input type="date" class="form-control" id="data_agendamento" required>
+            </div>
+            <div class="form-group">
+                <label for="hora_agendamento">Hora do Agendamento</label>
+                <input type="time" class="form-control" id="hora_agendamento" required>
+            </div>
+            <div class="form-group">
+                <label for="servico">Selecione o Serviço</label>
+                <select class="form-control" id="servico" required>
+                    <option value="">Escolha um serviço</option>
+                    <option value="banho_cao">Banho para Cão</option>
+                    <option value="tosa_gato">Tosa para Gato</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="telebusca">Deseja Tele-busca?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="telebusca" id="telebusca_sim" value="sim">
+                    <label class="form-check-label" for="telebusca_sim">Sim</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="telebusca" id="telebusca_nao" value="nao" checked>
+                    <label class="form-check-label" for="telebusca_nao">Não</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Agendar</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-light text-center py-4">
+        <p>&copy; 2024 PetShop - Todos os direitos reservados</p>
+        <p><a href="contato.html" target="_blank">Contato</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="validacao.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
